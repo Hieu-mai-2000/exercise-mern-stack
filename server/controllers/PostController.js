@@ -15,10 +15,11 @@ const createPost = async (req,res) =>{
     content:req.body.content,
     author: req.body.author,
     likeCount: req.body.likeCount,
+    attachment: req.body.attachment,
   })
   try {
     await post.save()
-    res.status(201).json({msg:"create successfully!!!"})
+    res.status(201).json({ msg: 'create successfully!!!', post: post })
   } catch (error) {
     res.status(500).json({ error: error.message })
   }

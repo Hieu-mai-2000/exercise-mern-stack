@@ -20,6 +20,10 @@ const schema = new Schema(
       type: Number,
       default: 0,
     },
+    attachment: {
+      type: String,
+      default: 'https://imgbin.com/img/imgbin/icons/ms-icon-310x310.png',
+    },
   },
   { timestamps: true }
 )
